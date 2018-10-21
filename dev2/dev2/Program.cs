@@ -64,11 +64,11 @@ namespace dev2
                         case 'г': outputStr = String.Concat(outputStr, "g"); break;
                         case 'д': outputStr = String.Concat(outputStr, "d"); break;
                         case 'е': outputStr = String.Concat(outputStr, "e"); break;
-                        case 'ё': outputStr = String.Concat(outputStr, "jo"); break;
+                        case 'ё': outputStr = String.Concat(outputStr, "yo"); break;
                         case 'ж': outputStr = String.Concat(outputStr, "zh"); break;
                         case 'з': outputStr = String.Concat(outputStr, "z"); break;
                         case 'и': outputStr = String.Concat(outputStr, "i"); break;
-                        case 'й': outputStr = String.Concat(outputStr, "j"); break;
+                        case 'й': outputStr = String.Concat(outputStr, "y"); break;
                         case 'к': outputStr = String.Concat(outputStr, "k"); break;
                         case 'л': outputStr = String.Concat(outputStr, "l"); break;
                         case 'м': outputStr = String.Concat(outputStr, "m"); break;
@@ -80,7 +80,7 @@ namespace dev2
                         case 'т': outputStr = String.Concat(outputStr, "t"); break;
                         case 'у': outputStr = String.Concat(outputStr, "u"); break;
                         case 'ф': outputStr = String.Concat(outputStr, "f"); break;
-                        case 'х': outputStr = String.Concat(outputStr, "h"); break;
+                        case 'х': outputStr = String.Concat(outputStr, "kh"); break;
                         case 'ц': outputStr = String.Concat(outputStr, "c"); break;
                         case 'ч': outputStr = String.Concat(outputStr, "ch"); break;
                         case 'ш': outputStr = String.Concat(outputStr, "sh"); break;
@@ -88,20 +88,20 @@ namespace dev2
                         case 'ъ': break;
                         case 'ы': outputStr = String.Concat(outputStr, "y"); break;
                         case 'ь': break;
-                        case 'э': outputStr = String.Concat(outputStr, "je"); break;
-                        case 'ю': outputStr = String.Concat(outputStr, "ju"); break;
-                        case 'я': outputStr = String.Concat(outputStr, "ja"); break;
+                        case 'э': outputStr = String.Concat(outputStr, "e"); break;
+                        case 'ю': outputStr = String.Concat(outputStr, "yu"); break;
+                        case 'я': outputStr = String.Concat(outputStr, "ya"); break;
                         case 'А': outputStr = String.Concat(outputStr, "A"); break;
                         case 'Б': outputStr = String.Concat(outputStr, "B"); break;
                         case 'В': outputStr = String.Concat(outputStr, "V"); break;
                         case 'Г': outputStr = String.Concat(outputStr, "G"); break;
                         case 'Д': outputStr = String.Concat(outputStr, "D"); break;
                         case 'Е': outputStr = String.Concat(outputStr, "E"); break;
-                        case 'Ё': outputStr = String.Concat(outputStr, "Jo"); break;
+                        case 'Ё': outputStr = String.Concat(outputStr, "Yo"); break;
                         case 'Ж': outputStr = String.Concat(outputStr, "Zh"); break;
                         case 'З': outputStr = String.Concat(outputStr, "Z"); break;
                         case 'И': outputStr = String.Concat(outputStr, "I"); break;
-                        case 'Й': outputStr = String.Concat(outputStr, "J"); break;
+                        case 'Й': outputStr = String.Concat(outputStr, "Y"); break;
                         case 'К': outputStr = String.Concat(outputStr, "K"); break;
                         case 'Л': outputStr = String.Concat(outputStr, "L"); break;
                         case 'М': outputStr = String.Concat(outputStr, "M"); break;
@@ -113,7 +113,7 @@ namespace dev2
                         case 'Т': outputStr = String.Concat(outputStr, "T"); break;
                         case 'У': outputStr = String.Concat(outputStr, "U"); break;
                         case 'Ф': outputStr = String.Concat(outputStr, "F"); break;
-                        case 'Х': outputStr = String.Concat(outputStr, "H"); break;
+                        case 'Х': outputStr = String.Concat(outputStr, "Kh"); break;
                         case 'Ц': outputStr = String.Concat(outputStr, "C"); break;
                         case 'Ч': outputStr = String.Concat(outputStr, "Ch"); break;
                         case 'Ш': outputStr = String.Concat(outputStr, "Sh"); break;
@@ -121,9 +121,9 @@ namespace dev2
                         case 'Ъ': break;
                         case 'Ы': outputStr = String.Concat(outputStr, "Y"); break;
                         case 'Ь': break;
-                        case 'Э': outputStr = String.Concat(outputStr, "Je"); break;
-                        case 'Ю': outputStr = String.Concat(outputStr, "Ju"); break;
-                        case 'Я': outputStr = String.Concat(outputStr, "Ja"); break;
+                        case 'Э': outputStr = String.Concat(outputStr, "E"); break;
+                        case 'Ю': outputStr = String.Concat(outputStr, "Yu"); break;
+                        case 'Я': outputStr = String.Concat(outputStr, "Ya"); break;
                         default : outputStr = String.Concat(outputStr, inputStr[i]); break;
                     }
                 }
