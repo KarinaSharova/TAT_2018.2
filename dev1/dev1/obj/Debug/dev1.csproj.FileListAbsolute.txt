@@ -1,7 +1,0 @@
-C:\Users\Lenovo\Desktop\1\dev1\dev1\bin\Debug\dev1.exe.config
-C:\Users\Lenovo\Desktop\1\dev1\dev1\bin\Debug\dev1.exe
-C:\Users\Lenovo\Desktop\1\dev1\dev1\bin\Debug\dev1.pdb
-C:\Users\Lenovo\Desktop\1\dev1\dev1\obj\Debug\dev1.csprojAssemblyReference.cache
-C:\Users\Lenovo\Desktop\1\dev1\dev1\obj\Debug\dev1.csproj.CoreCompileInputs.cache
-C:\Users\Lenovo\Desktop\1\dev1\dev1\obj\Debug\dev1.exe
-C:\Users\Lenovo\Desktop\1\dev1\dev1\obj\Debug\dev1.pdb
