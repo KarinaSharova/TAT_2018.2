@@ -42,6 +42,7 @@ namespace dev4
             {
                 Console.Write($"< The average car cost of {type}: {averageTypePriceValue}\n\n> ");
             }
+            //if the entered brand does not exist in the records
             else
                 Console.Write("Uncorrected type. Try again.\n\n> ");        
         }
