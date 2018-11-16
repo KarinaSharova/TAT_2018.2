@@ -1,25 +1,26 @@
-﻿using System;
-using System.Xml;
+﻿using System.Xml;
+using System.Collections.Generic;
 
 namespace dev6
 {
     // Converts specific xml file 'users' to an json file
     class XmlToJsonConversion
     {
-        public void ConvertXmlToJson(XmlElement xRoot)
+        public int ConvertXmlToJson(XmlElement xRoot, Dictionary<int, string> names, 
+            Dictionary<int, string> companies, Dictionary<int, string> ages)
         {
-            Console.Write("{\n  \"root\":  {\n    \"users\":  [\n");
+            //counts the number of nodes anad childnodes
+            int nodeKey = 0;
             // traversal of all nodes in the root element
             foreach (XmlNode xnode in xRoot)
             {
-                Console.Write("      {\n");
                 // get attribute 'name'
                 if (xnode.Attributes.Count > 0)
                 {
                     XmlNode attr = xnode.Attributes.GetNamedItem("name");
                     if (attr != null)
                     {
-                        Console.WriteLine("         @\"name\":  \"{0}\",\n", attr.Value);
+                        names.Add(nodeKey, attr.Value);
                     }
                 }
                 // go around all child nodes of the element 'user'
@@ -28,18 +29,17 @@ namespace dev6
                     // if the node is 'company'
                     if (childnode.Name == "company")
                     {
-                        Console.WriteLine("         \"company\":  \"{0}\",\n", childnode.InnerText);
+                        companies.Add(nodeKey, childnode.InnerText);
                     }
                     // if the node is 'age'
                     if (childnode.Name == "age")
                     {
-                        Console.WriteLine("         \"age\":  \"{0}\"\n", childnode.InnerText);
+                        ages.Add(nodeKey, childnode.InnerText);
                     }
                 }
-                Console.WriteLine("      },");
+                nodeKey++;
             }
-            Console.WriteLine("   ]");
-            Console.WriteLine("}");
+            return nodeKey;
         }
     }
 }
