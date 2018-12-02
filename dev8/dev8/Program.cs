@@ -32,8 +32,19 @@ namespace dev8
             gettingInformationFromXml.GetInformationFromXml(carsBrands, carsModels, carsCounts, carsPrices, docCarsRoot);
             gettingInformationFromXml.GetInformationFromXml(trucksBrands, trucksModels, trucksCounts, trucksPrices, docTrucksRoot);
 
+            Console.WriteLine("\nIf you want to execute commands for cars, enter 1. If for trucks, enter 2.\nInput number: ");
+            string number = Console.ReadLine();
+
             Commands commands = new Commands();
-            commands.PerformTheCommand(brands, models, counts, prices);
+            switch (number)
+            {
+                case "1":
+                    commands.PerformTheCommand(carsBrands, carsModels, carsCounts, carsPrices);
+                    break;
+                case "2":
+                    commands.PerformTheCommand(trucksBrands, trucksModels, trucksCounts, trucksPrices);
+                    break;
+            }
         }
     }
 }
