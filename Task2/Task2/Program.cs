@@ -8,20 +8,16 @@ namespace Task2
         static void Main(string[] args)
         {
             IP ip = new IP();
-            Console.WriteLine("Enter a sequence of characters: ");
-
             //character string introduction
-            string sequenceOfCharacters = Console.ReadLine();
-            List<string> pointIndices = new List<string>();
-            pointIndices = ip.FindSequencesSimilarToIp(sequenceOfCharacters);
+            string sequenceOfCharacters = "dshb123.4.56.1nbv";
+            List<string> ipSequence = new List<string>();
+            ipSequence = ip.FindSequencesSimilarToIp(sequenceOfCharacters);
 
             //output all ip
-            foreach (var item in pointIndices)
+            foreach (var item in ipSequence)
             {
                 Console.WriteLine(item);
             }
-
-            Console.ReadKey();
         }
     }
 }

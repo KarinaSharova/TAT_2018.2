@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Task2
 {
@@ -13,6 +11,8 @@ namespace Task2
             int ind = -1;
             int numberOfCharacters = sequenceOfCharacters.Length;
             int startIndex = 0;
+
+            // create a list of indexes where points stand
             while (startIndex <= numberOfCharacters)
             {
                 ind = sequenceOfCharacters.IndexOf(".", startIndex);
@@ -31,18 +31,20 @@ namespace Task2
                 countOfPoints++;
             }
 
-            for (int i = 0; i < countOfPoints - 3; i++)
+            //looking for points that are not farther than 4 positions apart
+                        for (int i = 2; i < countOfPoints; i++)
             {
-                if ((pointIndices[i + 3] - pointIndices[i + 2] > 1 && pointIndices[i + 3] - pointIndices[i + 2] < 5) && 
-                    (pointIndices[i + 2] - pointIndices[i + 1] > 1 && pointIndices[i + 2] - pointIndices[i + 1] < 5) &&
-                    (pointIndices[i + 1] - pointIndices[i] > 1 && pointIndices[i + 1] - pointIndices[i] < 5))
+                //differenceBetween1And2Points
+                int diff1 = pointIndices[i] - pointIndices[i - 1];
+                //differenceBetween2And3Points
+                int diff2 = pointIndices[i - 1] - pointIndices[i - 2];
+
+                if (diff1 <= 4 && diff2 <= 4)
                 {
-                    string estimatedIp = sequenceOfCharacters.Substring(pointIndices[i - 3], pointIndices[i+3]- pointIndices[i] + 3);
+                    string estimatedIp = sequenceOfCharacters.Substring(pointIndices[i - 2] - 3, 7 + diff1 + diff2);
                     sequencesSimilarToIp.Add(estimatedIp);
                 }
-
             }
-
             return sequencesSimilarToIp;
         }
 
