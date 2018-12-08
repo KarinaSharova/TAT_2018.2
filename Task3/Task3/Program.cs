@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Task3
 {
     // uploads specific xml file 'products', displays products that meet specified conditions
-    class Task1
+    class Task3
     {
         // Entry point
         static void Main(string[] args)
